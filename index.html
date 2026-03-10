@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анатолий | Backend & Automation Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .bento-card { transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease, border-color 0.3s ease; }
+        .bento-card:hover { transform: translateY(-2px); }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 antialiased p-4 md:p-10 min-h-screen">
+
+    <main class="max-w-4xl mx-auto space-y-6 relative">
+        
+        <button id="themeToggle" class="absolute top-0 right-0 p-2 md:-mt-4 md:-mr-4 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all text-slate-600 dark:text-slate-300 flex items-center justify-center w-10 h-10">
+            <svg id="sunIcon" class="hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg id="moonIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+        </button>
+
+        <header class="bento-card bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[1.5rem] p-6 md:p-8 shadow-sm hover:shadow-md flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div class="flex items-center gap-5 md:gap-6">
+                <div class="w-20 h-20 md:w-24 md:h-24 shrink-0 rounded-full bg-slate-200 dark:bg-slate-800 border-2 border-green-500 overflow-hidden flex items-center justify-center">
+                    <span class="text-slate-400 dark:text-slate-500 text-[10px] text-center px-1">Твоё фото<br>(Шторки & Темные глаза)</span>
+                </div>
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Анатолий</h1>
+                    <p class="text-base md:text-lg text-slate-500 dark:text-slate-400 font-medium">Backend & Automation Engineer</p>
+                    <p class="text-xs md:text-sm text-slate-400 dark:text-slate-500 mt-1 md:mt-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                        Открыт к предложениям / Создаю SaaS
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex flex-row md:flex-col gap-2 w-full md:w-auto">
+                <a href="https://t.me/Youoyouu" target="_blank" class="flex-1 text-center bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-2.5 rounded-xl text-sm font-semibold hover:opacity-90 transition">
+                    Написать мне
+                </a>
+                <a href="https://t.me/vqnsdev" target="_blank" class="flex-1 text-center bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+                    Dev Log / Развитие
+                </a>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <section class="bento-card md:col-span-2 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[1.5rem] p-6 md:p-8 shadow-sm">
+                <h2 class="text-lg md:text-xl font-semibold text-slate-900 dark:text-white mb-4">Обо мне</h2>
+                <p class="text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                    Специализируюсь на проектировании отказоустойчивых систем автоматизации. Фокусируюсь на B2B и SaaS решениях, которые берут на себя рутину и масштабируют бизнес без увеличения штата.
+                </p>
+                <p class="text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                    Использую современные подходы к разработке, что позволяет выдавать архитектурно сложные продукты в одиночку и в сжатые сроки.
+                </p>
+            </section>
+
+            <section class="bento-card bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[1.5rem] p-6 md:p-8 shadow-sm">
+                <h2 class="text-lg md:text-xl font-semibold text-slate-900 dark:text-white mb-4">Технологии</h2>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">Python</span>
+                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">Aiogram 3</span>
+                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">Node.js</span>
+                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">Docker</span>
+                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">PostgreSQL</span>
+                </div>
+            </section>
+        </div>
+
+        <section class="bento-card bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[1.5rem] p-6 md:p-8 shadow-sm">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-3">
+                <h2 class="text-lg md:text-xl font-semibold text-slate-900 dark:text-white">LeadHunter SaaS</h2>
+                <span class="px-3 py-1 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-[10px] md:text-xs font-bold rounded-lg border border-green-100 dark:border-green-800/50 uppercase tracking-wider">
+                    v3.2 Protocol
+                </span>
+            </div>
+            
+            <p class="text-sm md:text-base text-slate-600 dark:text-slate-300 mb-6">
+                Автономная система B2B-лидогенерации в Telegram. Самостоятельно находит целевых владельцев каналов и ведет переписку, имитируя поведение реального пользователя.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-3">
+                    <h3 class="font-bold text-slate-800 dark:text-slate-200 text-xs uppercase tracking-widest">Инженерные фичи:</h3>
+                    <ul class="space-y-2 text-slate-600 dark:text-slate-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span><strong>ClientManager</strong>: управление пулом сессий без конфликтов.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span><strong>Human Emulation</strong>: умные задержки и циклы сна для обхода защиты.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span><strong>Auto-Response</strong>: чекер ответов 24/7 с уведомлением владельца.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 dark:bg-slate-800/40 p-5 rounded-2xl border border-slate-100 dark:border-slate-700/50 flex flex-col justify-center">
+                    <h3 class="font-bold text-slate-800 dark:text-slate-200 text-xs uppercase tracking-widest mb-2">Статус:</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Система полностью автономна. Она обрабатывает очереди, управляет паузами (например, 35 мин) и масштабируется простым добавлением новых аккаунтов.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const sunIcon = document.getElementById('sunIcon');
+        const moonIcon = document.getElementById('moonIcon');
+        const html = document.documentElement;
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark'); sunIcon.classList.remove('hidden'); moonIcon.classList.add('hidden');
+        } else {
+            html.classList.remove('dark'); moonIcon.classList.remove('hidden'); sunIcon.classList.add('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            sunIcon.classList.toggle('hidden');
+            moonIcon.classList.toggle('hidden');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+        });
+    </script>
+</body>
+</html>
