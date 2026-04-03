@@ -20,17 +20,23 @@
         body { transition: background-color 0.3s ease, color 0.3s ease; }
         .bento-card { transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease, border-color 0.3s ease; }
         .bento-card:hover { transform: translateY(-2px); }
+        details > summary { list-style: none; cursor: pointer; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] .chevron { transform: rotate(180deg); }
+        .chevron { transition: transform 0.25s ease; }
     </style>
 </head>
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 antialiased p-4 md:p-10 min-h-screen">
 
     <main class="max-w-4xl mx-auto space-y-6 relative">
-        
+
+        <!-- Theme Toggle -->
         <button id="themeToggle" class="absolute top-0 right-0 p-2 md:-mt-4 md:-mr-4 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all text-slate-600 dark:text-slate-300 flex items-center justify-center w-10 h-10">
             <svg id="sunIcon" class="hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
             <svg id="moonIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
         </button>
 
+        <!-- Header -->
         <header class="bento-card bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[1.5rem] p-6 md:p-8 shadow-sm hover:shadow-md flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div class="flex items-center gap-5 md:gap-6">
                 <div class="w-20 h-20 md:w-24 md:h-24 shrink-0 rounded-full bg-slate-200 dark:bg-slate-800 border-2 border-green-500 overflow-hidden flex items-center justify-center">
@@ -45,17 +51,17 @@
                     </p>
                 </div>
             </div>
-            
             <div class="flex flex-row md:flex-col gap-2 w-full md:w-auto">
-                <a href="https://t.me/Youoyouu" target="_blank" class="flex-1 text-center bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-2.5 rounded-xl text-sm font-semibold hover:opacity-90 transition">
+                <a href="https://t.me/vqns7" target="_blank" class="flex-1 text-center bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-2.5 rounded-xl text-sm font-semibold hover:opacity-90 transition">
                     Написать мне
                 </a>
-                <a href="https://t.me/vqnsdev" target="_blank" class="flex-1 text-center bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+                <a href="https://t.me/v1nskdev" target="_blank" class="flex-1 text-center bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-slate-200 dark:hover:bg-slate-700 transition">
                     Dev Log / Развитие
                 </a>
             </div>
         </header>
 
+        <!-- About + Tech Stack -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <section class="bento-card md:col-span-2 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[1.5rem] p-6 md:p-8 shadow-sm">
                 <h2 class="text-lg md:text-xl font-semibold text-slate-900 dark:text-white mb-4">Обо мне</h2>
@@ -66,53 +72,62 @@
                     Использую современные подходы к разработке, что позволяет выдавать архитектурно сложные продукты в одиночку и в сжатые сроки.
                 </p>
             </section>
-
             <section class="bento-card bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[1.5rem] p-6 md:p-8 shadow-sm">
                 <h2 class="text-lg md:text-xl font-semibold text-slate-900 dark:text-white mb-4">Технологии</h2>
                 <div class="flex flex-wrap gap-2">
                     <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">Python</span>
                     <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">Aiogram 3</span>
+                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">Next.js</span>
+                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">TypeScript</span>
+                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">React</span>
                     <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">Node.js</span>
-                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">Docker</span>
+                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">Prisma</span>
                     <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">PostgreSQL</span>
+                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">Docker</span>
+                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">Nginx</span>
+                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">Linux</span>
+                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">Tailwind CSS</span>
                 </div>
             </section>
         </div>
 
+        <!-- LeadHunter SaaS -->
         <section class="bento-card bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[1.5rem] p-6 md:p-8 shadow-sm">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-3">
                 <h2 class="text-lg md:text-xl font-semibold text-slate-900 dark:text-white">LeadHunter SaaS</h2>
                 <span class="px-3 py-1 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-[10px] md:text-xs font-bold rounded-lg border border-green-100 dark:border-green-800/50 uppercase tracking-wider">
-                    v4.1 · Live Hunter
+                    v5.5 · Live
                 </span>
             </div>
-            
             <p class="text-sm md:text-base text-slate-600 dark:text-slate-300 mb-6">
-                Автономная система B2B-лидогенерации в Telegram. Самостоятельно находит целевых владельцев каналов и ведет переписку, имитируя поведение реального пользователя.
+                Автономная система B2B-лидогенерации в Telegram. Самостоятельно находит целевых владельцев каналов и ведёт переписку, имитируя поведение реального пользователя.
             </p>
-
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="space-y-3">
-                    <h3 class="font-bold text-slate-800 dark:text-slate-200 text-xs uppercase tracking-widest">Инженерные фичи:</h3>
+                    <h3 class="font-bold text-slate-800 dark:text-slate-200 text-xs uppercase tracking-widest">Ключевые решения:</h3>
                     <ul class="space-y-2 text-slate-600 dark:text-slate-400 text-sm">
                         <li class="flex items-start gap-2">
                             <span class="text-green-500 font-bold">✓</span>
-                            <span><strong>ClientManager</strong>: управление пулом сессий без конфликтов.</span>
+                            <span><strong>Multi-Account</strong>: пул аккаунтов с автопереключением при FloodWait</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="text-green-500 font-bold">✓</span>
-                            <span><strong>Human Emulation</strong>: умные задержки и циклы сна для обхода защиты.</span>
+                            <span><strong>Anti-Ban 5.0</strong>: Smart Sleep, batching, human emulation</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="text-green-500 font-bold">✓</span>
-                            <span><strong>Auto-Response</strong>: чекер ответов 24/7 с уведомлением владельца.</span>
+                            <span><strong>SaaS-изоляция</strong>: каждый пользователь видит только свои данные</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 font-bold">✓</span>
+                            <span><strong>QR-онбординг</strong>: авторизация + 2FA в одном сообщении</span>
                         </li>
                     </ul>
                 </div>
                 <div class="bg-slate-50 dark:bg-slate-800/40 p-5 rounded-2xl border border-slate-100 dark:border-slate-700/50 flex flex-col justify-center">
                     <h3 class="font-bold text-slate-800 dark:text-slate-200 text-xs uppercase tracking-widest mb-2">Статус:</h3>
                     <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                        Система полностью автономна. Она обрабатывает очереди, управляет паузами (например, 35 мин) и масштабируется простым добавлением новых аккаунтов.
+                        Полностью автономная система. Обрабатывает очереди, управляет паузами, масштабируется добавлением аккаунтов. 5+ версий, постоянная доработка.
                     </p>
                 </div>
             </div>
@@ -126,9 +141,7 @@
                     Live
                 </span>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
                 <!-- LeadHunter -->
                 <a href="https://v1nsky.github.io/leadhunter-landing/" target="_blank"
                    class="bento-card group bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-700/50 rounded-2xl p-5 flex flex-col gap-3 hover:border-violet-300 dark:hover:border-violet-700/60 transition-all">
@@ -137,20 +150,18 @@
                             <span class="text-xl">🔍</span>
                             <span class="font-semibold text-slate-900 dark:text-white text-sm md:text-base">LeadHunter</span>
                         </div>
-                        <span class="px-2 py-0.5 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-[10px] font-bold rounded-md border border-green-100 dark:border-green-800/50 uppercase tracking-wider">v4.1</span>
+                        <span class="px-2 py-0.5 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-[10px] font-bold rounded-md border border-green-100 dark:border-green-800/50 uppercase tracking-wider">v5.5</span>
                     </div>
                     <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                        SaaS Telegram-бот для авто-охоты на мастеров beauty-индустрии. Live-мониторинг групп, ЮКасса подписки, 7 ниш.
+                        SaaS Telegram-бот для авто-охоты на целевые контакты. Multi-account, анти-бан 5.0, Excel-экспорт.
                     </p>
                     <div class="flex flex-wrap gap-1.5 mt-auto">
                         <span class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-medium">Telethon</span>
                         <span class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-medium">aiogram 3</span>
-                        <span class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-medium">FastAPI</span>
-                        <span class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-medium">ЮКасса</span>
+                        <span class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-medium">SQLite</span>
                     </div>
                     <span class="text-violet-500 dark:text-violet-400 text-xs font-semibold group-hover:underline">Открыть лендинг →</span>
                 </a>
-
                 <!-- Beauty Bot -->
                 <a href="https://v1nsky.github.io/beauty-bot-landing/" target="_blank"
                    class="bento-card group bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-700/50 rounded-2xl p-5 flex flex-col gap-3 hover:border-violet-300 dark:hover:border-violet-700/60 transition-all">
@@ -162,7 +173,7 @@
                         <span class="px-2 py-0.5 bg-violet-50 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400 text-[10px] font-bold rounded-md border border-violet-100 dark:border-violet-800/50 uppercase tracking-wider">Beauty</span>
                     </div>
                     <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                        Telegram-бот для мастеров красоты: онлайн-запись, напоминания, модерация отзывов, проверка подписки на канал.
+                        Telegram-бот для мастеров красоты: онлайн-запись, напоминания, модерация отзывов, проверка подписки.
                     </p>
                     <div class="flex flex-wrap gap-1.5 mt-auto">
                         <span class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-medium">aiogram 3</span>
@@ -172,7 +183,111 @@
                     </div>
                     <span class="text-violet-500 dark:text-violet-400 text-xs font-semibold group-hover:underline">Открыть лендинг →</span>
                 </a>
+            </div>
+        </section>
 
+        <!-- Клиентские проекты -->
+        <section class="bento-card bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[1.5rem] p-6 md:p-8 shadow-sm">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-3">
+                <h2 class="text-lg md:text-xl font-semibold text-slate-900 dark:text-white">Клиентские проекты</h2>
+                <span class="px-3 py-1 bg-orange-50 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 text-[10px] md:text-xs font-bold rounded-lg border border-orange-100 dark:border-orange-800/50 uppercase tracking-wider">
+                    1 завершён
+                </span>
+            </div>
+
+            <!-- GLOBAL Dispatch -->
+            <div class="bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-700/50 rounded-2xl overflow-hidden">
+                <!-- Header — always visible -->
+                <div class="p-5 flex flex-col gap-4">
+                    <div class="flex items-start justify-between gap-3">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl">🚛</span>
+                            <div>
+                                <a href="https://mrmaxdispatch.com" target="_blank" class="font-semibold text-slate-900 dark:text-white text-sm md:text-base hover:text-violet-500 dark:hover:text-violet-400 transition-colors">
+                                    GLOBAL Dispatch <span class="text-[10px] text-slate-400 dark:text-slate-500 font-normal">↗</span>
+                                </a>
+                                <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">mrmaxdispatch.com · Корпоративный лендинг + CMS</span>
+                            </div>
+                        </div>
+                        <span class="px-2 py-0.5 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-[10px] font-bold rounded-md border border-green-100 dark:border-green-800/50 uppercase tracking-wider shrink-0">Сдан</span>
+                    </div>
+
+                    <!-- What was done — compact bullet list -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h3 class="font-bold text-slate-800 dark:text-slate-200 text-[10px] uppercase tracking-widest mb-2">Фронтенд</h3>
+                            <ul class="space-y-1.5 text-sm text-slate-600 dark:text-slate-400">
+                                <li class="flex items-start gap-1.5"><span class="text-green-500 font-bold text-xs mt-0.5">✓</span><span>Next.js 14 + TypeScript + Tailwind CSS</span></li>
+                                <li class="flex items-start gap-1.5"><span class="text-green-500 font-bold text-xs mt-0.5">✓</span><span>Мультиязычность EN / RU / UZ</span></li>
+                                <li class="flex items-start gap-1.5"><span class="text-green-500 font-bold text-xs mt-0.5">✓</span><span>framer-motion анимации + scroll-reveal</span></li>
+                                <li class="flex items-start gap-1.5"><span class="text-green-500 font-bold text-xs mt-0.5">✓</span><span>Динамические цвета и контент из БД</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-800 dark:text-slate-200 text-[10px] uppercase tracking-widest mb-2">Бэкенд + Админка</h3>
+                            <ul class="space-y-1.5 text-sm text-slate-600 dark:text-slate-400">
+                                <li class="flex items-start gap-1.5"><span class="text-green-500 font-bold text-xs mt-0.5">✓</span><span>15+ API endpoints (Next.js Route Handlers)</span></li>
+                                <li class="flex items-start gap-1.5"><span class="text-green-500 font-bold text-xs mt-0.5">✓</span><span>PBKDF2 auth, rate limiting, SQL/XSS защита</span></li>
+                                <li class="flex items-start gap-1.5"><span class="text-green-500 font-bold text-xs mt-0.5">✓</span><span>CMS: 9 секций, загрузка фото, color picker</span></li>
+                                <li class="flex items-start gap-1.5"><span class="text-green-500 font-bold text-xs mt-0.5">✓</span><span>Управление лидами со статусами</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Stack tags -->
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-medium">Next.js 14</span>
+                        <span class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-medium">TypeScript</span>
+                        <span class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-medium">Prisma</span>
+                        <span class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-medium">SQLite</span>
+                        <span class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-medium">Tailwind CSS</span>
+                        <span class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-medium">framer-motion</span>
+                        <span class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-medium">Telegram Bot API</span>
+                        <span class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-medium">Nginx</span>
+                        <span class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-medium">PM2</span>
+                    </div>
+
+                    <!-- Expandable: Telegram bot + Deploy -->
+                    <details class="group/details">
+                        <summary class="flex items-center justify-between text-left text-xs font-semibold text-violet-500 dark:text-violet-400 hover:text-violet-600 dark:hover:text-violet-300 transition-colors pt-1">
+                            <span>Детали проекта</span>
+                            <svg class="chevron w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </summary>
+                        <div class="mt-4 space-y-4 border-t border-slate-100 dark:border-slate-700/50 pt-4">
+                            <!-- Telegram -->
+                            <div>
+                                <h3 class="font-bold text-slate-800 dark:text-slate-200 text-[10px] uppercase tracking-widest mb-2 flex items-center gap-1.5">
+                                    <span>✈️</span> Telegram-бот
+                                </h3>
+                                <ul class="space-y-1.5 text-sm text-slate-600 dark:text-slate-400">
+                                    <li class="flex items-start gap-1.5"><span class="text-green-500 font-bold text-xs mt-0.5">✓</span><span>Уведомления о заявках с иконками по типу</span></li>
+                                    <li class="flex items-start gap-1.5"><span class="text-green-500 font-bold text-xs mt-0.5">✓</span><span>Система ролей: супер-админ / админ / доступ запрещён</span></li>
+                                    <li class="flex items-start gap-1.5"><span class="text-green-500 font-bold text-xs mt-0.5">✓</span><span>Название бота синхронизируется с бренд-неймом сайта</span></li>
+                                </ul>
+                            </div>
+                            <!-- Deploy -->
+                            <div>
+                                <h3 class="font-bold text-slate-800 dark:text-slate-200 text-[10px] uppercase tracking-widest mb-2 flex items-center gap-1.5">
+                                    <span>🚀</span> Деплой
+                                </h3>
+                                <ul class="space-y-1.5 text-sm text-slate-600 dark:text-slate-400">
+                                    <li class="flex items-start gap-1.5"><span class="text-green-500 font-bold text-xs mt-0.5">✓</span><span>Ubuntu VPS: Node.js + PM2 + Nginx reverse proxy</span></li>
+                                    <li class="flex items-start gap-1.5"><span class="text-green-500 font-bold text-xs mt-0.5">✓</span><span>Let's Encrypt SSL (HTTPS), домен mrmaxdispatch.com</span></li>
+                                    <li class="flex items-start gap-1.5"><span class="text-green-500 font-bold text-xs mt-0.5">✓</span><span>40-страничная инструкция для клиента (PDF)</span></li>
+                                </ul>
+                            </div>
+                            <!-- Extras -->
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="text-[10px] px-2 py-0.5 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 border border-green-100 dark:border-green-800/50 rounded-full font-medium">+ Telegram-бот (сверх ТЗ)</span>
+                                <span class="text-[10px] px-2 py-0.5 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 border border-green-100 dark:border-green-800/50 rounded-full font-medium">+ SEO-панель</span>
+                                <span class="text-[10px] px-2 py-0.5 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 border border-green-100 dark:border-green-800/50 rounded-full font-medium">+ Social links</span>
+                                <span class="text-[10px] px-2 py-0.5 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 border border-green-100 dark:border-green-800/50 rounded-full font-medium">+ Бесплатный деплой</span>
+                            </div>
+                        </div>
+                    </details>
+                </div>
             </div>
         </section>
 
